@@ -18,6 +18,8 @@ body {
   -moz-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 .carousel {
   border-bottom: 3px solid white;

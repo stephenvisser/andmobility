@@ -1,0 +1,46 @@
+body {
+  background: #444;
+  color: white;
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.carousel {
+  border-bottom: 3px solid white;
+}
+.content {
+  text-align: center;
+  display: inline-block;
+  width: 370px;
+  opacity: 0;
+}
+.new-content-add {
+  -webkit-transition: all linear 2s;
+  transition: all linear 2s;
+  opacity: 1;
+}
+.new-content-add.new-content-add-active {
+  opacity: 0;
+}
+.cta {
+  padding-top: 20px;
+  text-align: center;
+}
+.cta a {
+  color: white;
+  font-size: 14px;
+}

@@ -1,0 +1,40 @@
+body {
+  background: #444;
+  color: white;
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  border-bottom: 3px solid white;
+}
+
+.content {
+  text-align: center;
+  display: inline-block;
+  width: 370px;
+  opacity: 0;
+}
+
+.new-content-add
+{
+  transition:all linear 2s;
+  opacity: 1;
+}
+
+.new-content-add.new-content-add-active
+{
+  opacity: 0;
+}
+
+.cta {
+  padding-top: 20px;
+  text-align: center;
+  a {
+    color: white;
+    font-size: 14px;
+  }
+}

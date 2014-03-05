@@ -3,7 +3,7 @@ angular.module('app', ['ngAnimate']).directive('carousel', function($timeout, $a
   return function(scope, el, attr) {
 
     var currentId = 0,
-        text = scope.$eval(attr.carousel);
+    text = attr.carousel.split(/\w*,\w*/);
 
     function increment() {
       return (currentId = ((currentId + 1) % text.length));

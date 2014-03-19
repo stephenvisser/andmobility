@@ -3,7 +3,7 @@ angular.module('app', ['ngAnimate']).directive('carousel', function($timeout, $a
   return function(scope, el, attr) {
 
     var currentId = 0,
-    text = attr.carousel.split(/\w*,\w*/);
+  text = attr.carousel.split(',');
 
     function increment() {
       return (currentId = ((currentId + 1) % text.length));
@@ -11,7 +11,7 @@ angular.module('app', ['ngAnimate']).directive('carousel', function($timeout, $a
 
     function toggleText(test) {
       if (test) {
-        this.text(text[increment()]);
+        this.text(text[increment()].trim());
         $animate.addClass(this, 'new-content', toggleText.bind(this, !test));
       } else {
         this.text('');
@@ -24,4 +24,14 @@ angular.module('app', ['ngAnimate']).directive('carousel', function($timeout, $a
       toggleText.call(el, true);
     }, 0);
   };
+}).directive('person', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      'src':'@',
+      'href': '@'
+    },
+    transclude: true,
+    template: '<div class="mask"><img ng-src="{{src}}" height="90" width="90"></div><a ng-transclude class="name" ng-href="{{href}}"></a>'
+  }
 });

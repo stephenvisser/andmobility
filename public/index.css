@@ -8,6 +8,25 @@ body {
   height: 100%;
   margin: 0;
 }
+.card {
+  width: 500px;
+  vertical-align: top;
+  background: rgba(10, 10, 10, 0.8);
+  color: white;
+  padding: 20px;
+  display: inline-block;
+}
+.sponsor {
+  font-size: 16px;
+}
+.sponsor div {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.sponsor img {
+  margin-left: -webkit-calc(50% - 100px);
+  margin-left: calc(50% - 100px);
+}
 .screen {
   padding: 25px;
   width: 100%;
@@ -33,6 +52,12 @@ body {
 .screen h6 {
   margin: 0;
   font-size: 18px;
+}
+.screen .panel {
+  max-width: 500px;
+  background: rgba(10, 10, 10, 0.8);
+  color: white;
+  padding: 20px;
 }
 .main {
   display: -webkit-box;
@@ -102,6 +127,7 @@ person .name {
   height: 90px;
   vertical-align: top;
   margin-left: 20px;
+  color: white;
 }
 person .name span {
   vertical-align: middle;
